@@ -166,7 +166,6 @@ fieldset {
     "head ." "first last"
     "email phone" "password confirm";
   gap: 25px;
-  border: 1px solid silver;
 }
 form fieldset h3 {
   grid-area: head;
@@ -191,4 +190,16 @@ form fieldset .confirm {
 }
 div button {
   grid-area: submit;
+}
+input {
+  border: 1px solid #e5e7eb;
+}
+input:focus {
+  border: 10px solid blue;
+}
+input:invalid {
+  border: solid 1px red;
+}
+input:valid {
+  border: solid 1px green;
 }
