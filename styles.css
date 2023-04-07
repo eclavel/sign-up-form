@@ -1,3 +1,194 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 body {
   display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "img form";
+}
+img {
+  height: 100vh;
+}
+
+form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "text" "fieldset" "submit";
+}
+
+aside {
+  grid-area: img;
+}
+main {
+  grid-area: form;
+}
+form p {
+  grid-area: text;
+  font-size: 1.5rem;
+}
+
+form p,
+fieldset {
+  padding: 20px;
+}
+fieldset {
+  grid-area: fieldset;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "head ." "first last"
+    "email phone" "password confirm";
+  gap: 25px;
+  border: 1px solid silver;
+}
+form fieldset h3 {
+  grid-area: head;
+}
+form fieldset .first {
+  grid-area: first;
+}
+form fieldset .last {
+  grid-area: last;
+}
+form fieldset .email {
+  grid-area: email;
+}
+form fieldset .phone {
+  grid-area: phone;
+}
+form fieldset .password {
+  grid-area: password;
+}
+form fieldset .confirm {
+  grid-area: confirm;
+}
+div button {
+  grid-area: submit;
 }
