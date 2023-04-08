@@ -149,10 +149,16 @@ aside div.logo-card {
   height: 20%;
   width: 100%;
   background-color: black;
+  opacity: 0.8;
 }
 
 aside div.logo-card img {
   height: 100%;
+}
+
+aside div.logo-card div {
+  font-size: 4.5rem;
+  color: #e5e7eb;
 }
 
 form {
