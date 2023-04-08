@@ -165,7 +165,7 @@ form {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "text" "fieldset" "submit";
-  margin-left: 35px;
+  row-gap: 30px;
 }
 
 aside {
@@ -188,6 +188,8 @@ fieldset {
     "head ." "first last"
     "email phone" "password confirm";
   gap: 25px;
+  border: 1px solid silver;
+  box-shadow: 0px 2px #e5e7eb;
 }
 form fieldset h3 {
   grid-area: head;
@@ -212,6 +214,12 @@ form fieldset .confirm {
 }
 div button {
   grid-area: submit;
+  background-color: #596d48;
+  color: white;
+  font-size: large;
+  height: 50px;
+  width: 170px;
+  border-radius: 15px;
 }
 input {
   border: 1px solid #e5e7eb;
