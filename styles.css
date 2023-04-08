@@ -127,13 +127,32 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* start of actual css */
 body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "img form";
 }
-img {
+aside {
+  position: relative;
+}
+aside img.sidebar-img {
   height: 100vh;
+}
+
+aside div.logo-card {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15%;
+  height: 20%;
+  width: 100%;
+  background-color: black;
+}
+
+aside div.logo-card img {
+  height: 100%;
 }
 
 form {
@@ -153,10 +172,6 @@ form p {
   font-size: 1.5rem;
 }
 
-form p,
-fieldset {
-  padding: 20px;
-}
 fieldset {
   grid-area: fieldset;
   display: grid;
