@@ -199,8 +199,14 @@ fieldset {
   background-color: white;
   margin-left: -40px;
 }
+
+form fieldset div.form-input {
+  display: flex;
+  flex-direction: column;
+}
 form fieldset h3 {
   grid-area: head;
+  font-size: 30px;
 }
 form fieldset .first {
   grid-area: first;
